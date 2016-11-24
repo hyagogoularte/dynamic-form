@@ -1,0 +1,35 @@
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	vertical-align:baseline;
+}
+
+header {
+    display: block;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    border-top-style: solid;
+    background-color: #506e84;
+    border-top-color: #40586a;
+}
+
+section {
+	display: block;
+    height: auto;
+    width: 500px; 
+    margin: 0 auto;
+	padding: 2em;
+}
+footer {
+    display: block;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    border-top-style: solid;
+    background-color: #506e84;
+    border-top-color: #40586a;
+    color: #ffffff;
+    text-align: center;
+}

@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Resultados Digitais - Teste</title>
-	<!-- LIB -->
-	<link rel="stylesheet" type="text/css" href="../components/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<head>
+		<title>Resultados Digitais - Teste</title>
+		<!-- LIB -->
+		<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 
-	<!-- LIB -->
-	<script type="text/javascript" src="../components/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="../components/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<!-- PESSOAR -->
+		<link rel="stylesheet" type="text/css" href="../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../css/form.css">
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<span>Resultados</span><span>Digitais</span>
+			</div>
+		</header>
+		<section>
+			<div id="dynamicForm"></div>
+		</section>
+		<footer>
+			Desenvolvido por Hyago Silva Goularte para ResultadosDigitais.
+		</footer>
 
-	<!-- PESSOAR -->
-	<script type="text/javascript" src="../script/validParameter.js"></script>
-	<script type="text/javascript" src="../script/dynamicFormPlugin.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			var vpo = new ValidParamterObject();
+		<!-- LIB -->
+		<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-			var data = {
-				"token": "62bb61431348e22850828a5829c4373faafe29c1",
-				"secret": "51a266c2844ccd5cac83d88de88d82d05358aa51",
-				"modal": vpo.getParameter(),
-				"fields": {
-					"estado": ["PR", "SC", "SP", "RS"],
-					"nível": ["Iniciante", "Intermediário", "Avançado", "Ninja"]
-				}
-			};
+		<!-- PESSOAR -->
+		<script type="text/javascript" src="../script/validParameter.js"></script>
+		<script type="text/javascript" src="../script/dynamicFormPlugin.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var vpo = new ValidParamterObject();
 
-			$('#dynamicForm').dynamicForm(data);
-		});
-	</script>
-</head>
-<body>
+				var data = {
+					"token": "62bb61431348e22850828a5829c4373faafe29c1",
+					"secret": "51a266c2844ccd5cac83d88de88d82d05358aa51",
+					"modal": vpo.getParameter(),
+					"fields": {
+						"estado": ["PR", "SC", "SP", "RS"],
+						"nível": ["Iniciante", "Intermediário", "Avançado", "Ninja"]
+					}
+				};
 
-	<div id="dynamicForm"></div>
-
-
-<!-- 
-1. Receber parametro
-2. Pegar parametro, validar e realizar um fake de requisição com 200 e 500
-3. 
-3.1. Se for 200, montar form
-3.2. Se for 500, exibir uma mensagem de error e retornar para página de login
-4. implementar função para montar o form dinamicamente
-5. 
- --></body>
+				$('#dynamicForm').dynamicForm(data);
+			});
+		</script>
+	</body>
 </html>
 

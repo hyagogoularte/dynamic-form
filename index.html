@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Resultados Dig</title>
+	<title>Resultados Digitais</title>
+	<!-- LIB -->
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+	<!-- PESSOAR -->
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+
 </head>
 	<body>
-		<form action="template/form.html" method="GET">
-			<input type="radio" checked="true" name="modal" value="true"> - Com Modal
-			<br>
-			<input type="radio" name="modal" value="false"> - Sem Modal
-			<br>
-			<button type="submit" value="just-do-it">Enviar</button>
-		</form>
+		<header>
+			<div class="logo">
+				<span>Resultados</span><span>Digitais</span>
+			</div>
+		</header>
+		<section>
+			<form action="template/form.html" method="GET">
+				<div class="radio">
+				  <label>
+				    <input type="radio" checked="true" name="modal" value="true"> Com modal
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="modal" value="false"> Sem Modal
+				  </label>
+				</div>
+				<div class="form-group">
+				      <button type="submit" class="btn btn-default">Enviar</button>
+				</div>
+			</form>
+		</section>
+		<footer>
+			Desenvolvido por Hyago Silva Goularte para ResultadosDigitais.
+		</footer>
+		
 	</body>
 </html>

@@ -22,6 +22,10 @@
 	}
 
 	function returnParam(value) {
+		if(value['modal'] === null || value['modal'] === undefined) {
+			return false; 
+		}
+		
 		return $.parseJSON(value['modal']);
 	}
 
