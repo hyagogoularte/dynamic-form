@@ -120,8 +120,9 @@ $ bower install
 $ npm install
 ```
 
-When the whole process is completed, you need to start the server:
+When the whole process is completed, you need to start the mongoDB and the server:
 ```
+$ sudo service mongod start
 $ nodejs app.js
 ```
 
