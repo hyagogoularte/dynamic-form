@@ -1,8 +1,8 @@
 * {
-	margin:0;
-	padding:0;
-	list-style:none;
-	vertical-align:baseline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
 }
 
 header {
@@ -16,12 +16,13 @@ header {
 }
 
 section {
-	display: block;
+    display: block;
     height: auto;
-    width: 500px; 
+    width: 500px;
     margin: 0 auto;
-	padding: 2em;
+    padding: 2em;
 }
+
 footer {
     display: block;
     height: auto;

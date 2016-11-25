@@ -1,21 +1,23 @@
 .logo {
-	display: block;
+    display: block;
     font-size: 3em;
     padding: 0.5em 0;
     line-height: 1;
     text-align: center
 }
+
 .logo span:first-child {
     color: #98b0c1;
     font-style: normal;
-	font-weight: bolder;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+    font-weight: bolder;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
 }
+
 .logo span:last-child {
-	color: #d3dbe0;
+    color: #d3dbe0;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -23,9 +25,11 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
+
 .buttonForm {
     margin-right: 12px;
 }
+
 .actionButtons {
     text-align: center;
 }

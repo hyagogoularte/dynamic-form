@@ -1,30 +1,30 @@
 {
-  "name": "rd-fe-test",
-  "homepage": "https://github.com/hyagogoularte/rd-fe-test",
-  "authors": [
-    "Hyago Goularte <hyagogoularte@gmail.com>"
-  ],
-  "description": "front-end challenge",
-  "main": "index.html",
-  "keywords": [
-    "rd",
-    "resultados",
-    "digitais",
-    "test",
-    "fe",
-    "front-end"
-  ],
-  "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "jquery": "^3.1.1",
-    "bootstrap": "^3.3.7"
-  }
+    "name": "rd-fe-test",
+    "homepage": "https://github.com/hyagogoularte/rd-fe-test",
+    "authors": [
+        "Hyago Goularte <hyagogoularte@gmail.com>"
+    ],
+    "description": "front-end challenge",
+    "main": "index.html",
+    "keywords": [
+        "rd",
+        "resultados",
+        "digitais",
+        "test",
+        "fe",
+        "front-end"
+    ],
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "^3.1.1",
+        "bootstrap": "^3.3.7"
+    }
 }
