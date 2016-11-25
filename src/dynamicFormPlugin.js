@@ -118,6 +118,7 @@
                     url: 'http://localhost:3000/contact/',
                     success: function(response) {
                         alert(response);
+                        $($form).trigger('reset')
                     },
                     error: function(e) {
                         alert(e.responseText);
