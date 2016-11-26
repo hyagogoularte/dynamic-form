@@ -8,7 +8,7 @@
 
     $.fn.dynamicForm = function(data) {
         function createButton(id, type, name, value) {
-            return $('<button type="' + type + '" class="btn btn-default buttonForm" name="' + name + '" value="' + value + '">' + value + '</button>');
+            return $('<button type="' + type + '" id="' + id + '" class="btn btn-default buttonForm" name="' + name + '" value="' + value + '">' + value + '</button>');
         }
 
         function createInput(id, label, options) {
@@ -105,6 +105,8 @@
             $($form).submit(function(e) {
                 e.preventDefault();
                 $.ajax({
+                    url: 'http://localhost:3000/contact/',
+                    contentType: 'application/json',
                     type: 'POST',
                     data: JSON.stringify({
                         secret: e.target[0].value,
@@ -114,8 +116,6 @@
                         state: e.target[4].value,
                         level: e.target[5].value
                     }),
-                    contentType: 'application/json',
-                    url: 'http://localhost:3000/contact/',
                     success: function(response) {
                         alert(response);
                         $($form).trigger('reset')
