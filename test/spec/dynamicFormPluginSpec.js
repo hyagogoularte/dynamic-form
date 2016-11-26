@@ -57,22 +57,6 @@ describe('DynamicForm plugin test', function() {
         });
     });
 
-    // describe('The field name and email should be mandatory', function() {
-    //     it('should be field name mandatory', function() {
-    //     	spyEvent = spyOnEvent('#successButton', 'click');
-    //     	$('#successButton').trigger("click");
-
-    //     });
-    // });
-
-    //   it('should invoke trowns if options object is empty', function() {
-    // spyEvent = spyOn(window, 'alert');
-    //   	$('#dynamicForm').remove();
-    //       $('body').append('<div id="dynamicForm"></div>');
-    //       $('#dynamicForm').dynamicForm({})
-    //       expect(spyEvent).toHaveBeenTriggered()
-    //   });
-
     it('should invoke the successButton click event.', function() {
         spyEvent = spyOnEvent('#successButton', 'click');
         $('#successButton').trigger("click");
