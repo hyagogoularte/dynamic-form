@@ -53,11 +53,25 @@
         }
 
         function openFormWithModal(ref, data) {
-            alert('withmodal');
+            var template = '';
+            template += '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">';
+            template += '  <div class="modal-dialog" role="document">';
+            template += '    <div class="modal-content">';
+            template += '      <div class="modal-header">';
+            template += '        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+            template += '        <h4 class="modal-title" id="myModalLabel">Formulário</h4>';
+            template += '      </div>';
+            template += '      <div class="modal-body"></div>';
+            template += '   </div>';
+            template += ' </div>';
+            template += '</div>';
+
+            $modalForm = $(template);
+            mountForm($modalForm.find('.modal-body')[0], data);
+            $modalForm.modal('show');
         }
 
         function mountForm(ref, data) {
-            console.log('mountForm', ref, data);
             var $form = $('<form method="post"/>');
 
             $($form).append(createInput('secretField', 'secretField', {
@@ -99,26 +113,30 @@
             }));
 
             var $formGroup = $('<div class="form-group actionButtons"/>');
-            $formGroup.append(createButton('successButton', 'submit', 'successButton', 'Enviar'));
+            $formGroup.append(createButton('successButton', 'button', 'successButton', 'Enviar'));
             $($form).append($formGroup);
 
-            $($form).submit(function(e) {
+            $($form).find('#successButton').click(function(e) {
                 e.preventDefault();
+
+                var values = $($form).serializeArray();
                 $.ajax({
                     url: 'http://localhost:3000/contact/',
                     contentType: 'application/json',
                     type: 'POST',
                     data: JSON.stringify({
-                        secret: e.target[0].value,
-                        token: e.target[1].value,
-                        name: e.target[2].value,
-                        email: e.target[3].value,
-                        state: e.target[4].value,
-                        level: e.target[5].value
+                        secret: values[0].value,
+                        token: values[1].value,
+                        lead: {
+                            name: values[2].value,
+                            email: values[3].value,
+                            state: values[4].value,
+                            level: values[5].value
+                        }
                     }),
                     success: function(response) {
                         alert(response);
-                        $($form).trigger('reset')
+                        $($form).trigger('reset');
                     },
                     error: function(e) {
                         alert(e.responseText);
@@ -130,9 +148,8 @@
             $(ref).append($form);
         }
 
-
         if ($.isEmptyObject(data)) {
-            alert('Erro - Objeto está vazio.');
+            alert("Object is empty.");
             return;
         }
 

@@ -3,6 +3,7 @@
 
 <head>
     <title>Resultados Digitais - Teste</title>
+    <meta charset="utf-8" /> 
     <!-- LIB -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- PESSOAR -->
@@ -17,7 +18,23 @@
         </div>
     </header>
     <section>
-        <div id="dynamicForm"></div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" value="false" checked> Sem modal
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" value="true"> Com Modal
+            </label>
+        </div>
+        <br>
+        <div id="withModal">
+            <button type="button" class="btn btn-default">Abrir modal</button>
+        </div>
+        <div id="withoutModal">
+            <div id="dynamicForm"></div>
+        </div>
     </section>
     <footer>
         Desenvolvido por Hyago Silva Goularte para ResultadosDigitais.
@@ -25,27 +42,9 @@
     <!-- LIB -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
     <!-- PESSOAR -->
-    <script type="text/javascript" src="js/validParameter.js"></script>
     <script type="text/javascript" src="../src//dynamicFormPlugin.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var vpo = new ValidParamterObject();
-
-        var data = {
-            "token": "62bb61431348e22850828a5829c4373faafe29c1",
-            "secret": "51a266c2844ccd5cac83d88de88d82d05358aa51",
-            "modal": vpo.getParameter(),
-            "fields": {
-                "estado": ["PR", "SC", "SP", "RS"],
-                "nível": ["Iniciante", "Intermediário", "Avançado", "Ninja"]
-            }
-        };
-
-        $('#dynamicForm').dynamicForm(data);
-    });
-    </script>
+    <script type="text/javascript" src="js//script.js"></script>
 </body>
 
 </html>
