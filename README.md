@@ -126,7 +126,7 @@ $ sudo service mongod start
 $ nodejs app.js
 ```
 
-Now, you can see the results opening the page index.html on folder test/index.html.
+Now, you can see the results opening the page index.html on folder demo/index.html.
 
 
 I hope I helped you!
